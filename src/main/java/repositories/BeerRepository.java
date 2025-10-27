@@ -49,7 +49,7 @@ public class BeerRepository {
     }
 
     public void create(String name, int brewerId, int categoryId, float price, int stock, float alcohol, int version, Blob image) {
-        System.out.println("--------Create Beer--------");
+        System.out.println("--------Create--------");
         try (Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/thebelgianbrewerydb?useSSL=false", "intec", "intec-123");
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_BEER_SQL)) {
@@ -77,6 +77,7 @@ public class BeerRepository {
     }
 
     public void createMultiple(List<Object[]> beers) {
+        System.out.println("--------CreateMultiple--------");
         try (Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/thebelgianbrewerydb?useSSL=false", "intec", "intec-123");
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_BEER_SQL)) {
@@ -103,6 +104,7 @@ public class BeerRepository {
     }
 
     public void update(int id, String name, int brewerId, int categoryId, float price, int stock, float alcohol, int version, Blob image) {
+        System.out.println("--------Update--------");
         try (Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/thebelgianbrewerydb?useSSL=false", "intec", "intec-123");
              PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_BEER_SQL)) {
@@ -141,6 +143,7 @@ public class BeerRepository {
     }
 
     public void delete(int id) {
+        System.out.println("--------Delete--------");
         try (Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/thebelgianbrewerydb?useSSL=false", "intec", "intec-123");
              PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BEER_SQL)) {

@@ -36,7 +36,6 @@ public class DatabaseApp {
                 new Object[]{"Zwoele Berten (=Bornem dubbel)", 14, 14, 2.04f, 200, 0.0f, 0, null}
         );
         beerRepository.createMultiple(beers);
-
         beerRepository.update(1557, "Testbier aangepast", 1, 1, 2.8f, 120, 5.2f, 2, null);
         beerRepository.delete(1557);
         beerRepository.deleteMultiple(1558, 1559, 1560);
